@@ -1,4 +1,5 @@
 from PIL import ImageGrab, ImageOps
+from PIL import image
 import pyautogui
 import time
 import numpy as np
@@ -42,8 +43,8 @@ def press_space():
 
 def imageGrab():
 
-    box = (cordinates.dinasaur[0] + 30, cordinates.dinasaur[1]
-           cordinates.dinasaur[0] + 120, cordinates.dianasaur[1] + 2)
+    box = (cordinates.dinasaur[0] + 30, cordinates.dinasaur[1],
+           cordinates.dinasaur[0] + 120, cordinates.dinasaur[1] + 2)
 
     image = imageGrab.grab(box)
 
@@ -57,13 +58,13 @@ def imageGrab():
     print(a.sum())
     return a.sum()
 
-restartGame():
- while True
+restartGame()
+while True:
 
      # 435 is the sum of white pixels values of box.
      # You may get different value is you are taking bigger
 
-     if(imageGrab() != 435)
+     if(imageGrab() != 435):
          press_space()
 
          time.sleep(0.1)
